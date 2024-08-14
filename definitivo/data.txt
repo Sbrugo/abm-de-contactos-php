@@ -1,0 +1,14 @@
+La idea de esta carpeta es crear un Alta Baja Modificacion de contactos que captura nombre, apellidos y fecha de nacimiento de
+todos los usuarios en el archivo contactos.json, luego los datos son modificables y se pueden eliminar. 
+La idea es pasar de usar un archivo .json a una base de datos en SQL. 
+
+El archivo index.php muestra la base de datos con un botón para agregar contactos y un texto que dice si hay o no hay ya contactos
+agendados. Al clickear el boton de agregar se abre la pagina agregar.php que tiene un formulario completo con los datos del contactos
+seleccionado y usa el metodo POST para enviar datos a guardar.php que los recibe y los conecta a la base de datos que se muestra en index.php.
+
+Cada contacto se muestra en index.php usando echo <table> y un foreach para cada contacto del json.
+Cada contacto tiene sus datos y dos botones, eliminar y modificar, que en la uri llevan el metodo get. 
+De ahi modificar.php muestra la pagina con el formulario con los datos anteriores del contacto modificables 
+y cuando presionamos el boton de guardar empujamos el metodo post en la accion guardar.php.
+
+El metodo post y el metodo get van acompañados de action que dice con que archivo se ejecuta. 
